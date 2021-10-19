@@ -1,0 +1,20 @@
+domain: github.com
+layout:
+- go.kubebuilder.io/v3
+projectName: k8s-cornjob-controller
+repo: github.com/raihankhan/k8s-cornjob-controller
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: github.com
+  group: batch
+  kind: CronJob
+  path: github.com/raihankhan/k8s-cornjob-controller/api/v1
+  version: v1
+  webhooks:
+    defaulting: true
+    validation: true
+    webhookVersion: v1
+version: "3"
